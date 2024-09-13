@@ -177,12 +177,12 @@ body {
   }
 }
 
-.section-stories {
+.section-testimonials {
   position: relative;
   padding: 15rem 0;
 }
 @media only screen and (max-width: 56.25em) {
-  .section-stories {
+  .section-testimonials {
     padding: 10rem 0;
   }
 }
