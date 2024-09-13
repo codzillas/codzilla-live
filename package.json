@@ -6,9 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "compile": "sass --watch ./sass/main.scss ./css/index.css"
   },
-  "author": "",
+  "author": "Jatin Narang",
   "license": "ISC",
-  "description": "",
+  "description": "A personal HTML/CSS Project",
   "dependencies": {
     "sass": "^1.78.0"
   }
