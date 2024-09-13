@@ -28,7 +28,7 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.86, 0, 0.07, 1);
 
-        //transform: scale(80);
+        // transform: scale(80);
     }
 
     &__nav {
@@ -44,10 +44,7 @@
     }
 
     &__list {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @include absCenter();
         list-style: none;
         text-align: center;
         width: 100%;
