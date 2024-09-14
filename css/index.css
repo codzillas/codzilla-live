@@ -78,7 +78,7 @@ body {
   display: block;
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 1.74rem;
+  letter-spacing: 0.5rem;
   margin-bottom: 6rem;
   animation-name: moveInRight;
   animation-duration: 0.5s;
@@ -137,6 +137,10 @@ body {
 
 .u-margin-top-huge {
   margin-top: 10rem !important;
+}
+
+.color-white {
+  color: #fff;
 }
 
 .section-about {
@@ -257,6 +261,7 @@ body {
 .btn--white {
   background-color: #fff;
   color: #777;
+  z-index: 15;
 }
 .btn--white::after {
   background-color: #fff;
@@ -751,7 +756,6 @@ body {
 
 .header {
   height: 95vh;
-  background-image: linear-gradient(to right, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("./img/hero.jpg");
   background-size: cover;
   background-position: top;
   position: relative;
@@ -1018,6 +1022,14 @@ body {
 }
 .row .col-3-of-4 {
   width: calc(3 * (100% - 3 * 6rem) / 4 + 2 * 6rem);
+}
+
+#particles-js {
+  width: 94%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  background-color: #28b485;
 }
 
 /*# sourceMappingURL=index.css.map */

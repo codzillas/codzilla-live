@@ -3,6 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
@@ -11,464 +19,612 @@
     <link rel="stylesheet" href="./css/index.css" />
     <!--TODO: Add favicon -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <script src="./particles.js"></script>
     <title>CodZilla</title>
   </head>
   <body>
-    <div class="navigation">
-      <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
-      <label for="navi-toggle" class="navigation__button">
-        <span class="navigation__icon">&nbsp;</span>
-      </label>
-      <div class="navigation__background">&nbsp;</div>
-      <nav class="navigation__nav">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>01</span>About CodZilla</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"><span>02</span>About Us</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>03</span>Popular Services</a
-            >
-          </li>
-          <li class="navigation__item">
-            <a href="#" class="navigation__link"
-              ><span>04</span>Our Testimonials</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <header class="header">
-      <div class="header__logo-box">
-        <!-- <img src="img/tech/codzilla-logo.png" alt="Logo" class="header__logo" /> -->
+    <!-- <div class="section">
+      <div class="motion-element" id="animate-me">Animate Me</div>
+      <div class="motion-element" data-aos="fade-up">Animate Me</div>
+    </div> -->
+    <div>
+      <div id="particles-js"></div>
+      <div class="navigation">
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle" />
+        <label for="navi-toggle" class="navigation__button">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a href="#about-us" class="navigation__link"
+                ><span>01</span>About us</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#services" class="navigation__link"
+                ><span>02</span>Our Services</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#plans-and-pricing" class="navigation__link"
+                ><span>03</span>Plans & Pricing</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#testimonials" class="navigation__link"
+                ><span>04</span>Our Testimonials</a
+              >
+            </li>
+            <li class="navigation__item">
+              <a href="#contact-us" class="navigation__link"
+                ><span>04</span>Contact Us</a
+              >
+            </li>
+          </ul>
+        </nav>
       </div>
 
-      <div class="header__text-box">
-        <h1 class="heading-primary">
-          <span class="heading-primary--main">CodZilla</span>
-          <span class="heading-primary--sub">solution is here</span>
-          <a href="#" class="btn btn--white btn--animated"
-            >Discover our services</a
-          >
-        </h1>
-      </div>
-    </header>
-    <main>
-      <section class="section-about">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">Exciting services for you</h2>
+      <header class="header">
+        <div class="header__logo-box">
+          <!-- <img src="img/tech/codzilla-logo.png" alt="Logo" class="header__logo" /> -->
         </div>
 
+        <div class="header__text-box">
+          <h1 class="heading-primary">
+            <span class="heading-primary--main">CodZilla</span>
+            <span class="heading-primary--sub"
+              >Transforming Your Ideas into Reality</span
+            >
+            <a href="#services" class="btn btn--white btn--animated"
+              >Discover our services</a
+            >
+          </h1>
+        </div>
+      </header>
+      <main>
+        <section id="about-us" class="section-about">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">About us</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-1-of-2">
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Unmatched Web Development
+              </h3>
+              <p class="paragraph">
+                At Codzilla, we specialize in creating high-performance websites
+                that are not only visually appealing but also functional and
+                user-friendly. Our team uses the latest technologies and best
+                practices to ensure your website stands out from the
+                competition. Whether you need a custom-built site, e-commerce
+                solutions, or website maintenance, we have you covered.
+              </p>
+
+              <h3 class="heading-tertiary u-margin-bottom-small">
+                Next-Gen Web Technologies
+              </h3>
+              <p class="paragraph">
+                we leverage cutting-edge web technologies to build dynamic,
+                high-performance websites that drive results. Our expertise
+                spans the latest frameworks, responsive designs, and robust
+                development practices to ensure your site excels in speed,
+                security, and user experience. From innovative web applications
+                to seamless integrations, we deliver solutions that keep you
+                ahead of the curve in the digital landscape.
+              </p>
+
+              <a href="#" class="btn-text">Learn more &rarr;</a>
+            </div>
+            <div class="col-1-of-2">
+              <div class="composition">
+                <img
+                  src="img/code-screen.jpg"
+                  alt="1"
+                  class="composition__photo composition__photo--p1"
+                />
+                <img
+                  src="img/team.jpg"
+                  alt="2"
+                  class="composition__photo composition__photo--p2"
+                />
+                <img
+                  src="img/workstation.jpg"
+                  alt="3"
+                  class="composition__photo composition__photo--p3"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="services" class="section-features">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary color-white">Our Services</h2>
+          </div>
+          <div class="row">
+            <div class="col-1-of-4">
+              <div class="feature-box">
+                <i class="feature-box__icon icon-basic-world"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Web Development
+                </h3>
+                <p class="feature-box__text">
+                  Our web development services are designed to deliver
+                  high-quality, custom-built websites that meet your specific
+                  needs. Trust us to bring your vision to life with precision
+                  and creativity.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="feature-box">
+                <i class="feature-box__icon icon-basic-compass"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  API Development
+                </h3>
+                <p class="feature-box__text">
+                  Integrate and extend your digital ecosystem with our API
+                  development services. We design and develop APIs that
+                  facilitate seamless communication between your applications,
+                  enhance functionality, and streamline processes.
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="feature-box">
+                <i class="feature-box__icon icon-basic-map"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Project Management
+                </h3>
+                <p class="feature-box__text">
+                  Our experienced project managers use proven methodologies to
+                  oversee every aspect of your project, from initial planning to
+                  final execution. We ensure that timelines are met, budgets are
+                  adhered to, and goals are achieved, all while
+                </p>
+              </div>
+            </div>
+
+            <div class="col-1-of-4">
+              <div class="feature-box">
+                <i class="feature-box__icon icon-basic-heart"></i>
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  24*7 Free Support
+                </h3>
+                <p class="feature-box__text">
+                  Exceptional support is crucial to keeping your business
+                  running smoothly. Our 24/7 customer support team is always
+                  available to address your concerns, provide technical
+                  assistance, and resolve any issues promptly. We are dedicated
+                  to offering reliable, responsive service to ensure your
+                  operations continue without interruption.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section-services" id="plans-and-pricing">
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Plans & Pricing</h2>
+          </div>
+
+          <div class="row">
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--1">&nbsp;</div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--1"
+                      >Standard Plan</span
+                    >
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>5 pages Website</li>
+                      <li>1 Year Free Domain Name ( .com .in .org )</li>
+                      <li>Admin Access</li>
+                      <li>Free SSL Certificates</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-1">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">$297</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Call now!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--2">&nbsp;</div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--2"
+                      >Premium Plan</span
+                    >
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>12 pages Website</li>
+                      <li>1 Year Free Domain Name ( .com .in .org )</li>
+                      <li>Admin Access</li>
+                      <li>Free SSL Certificates</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-2">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">$497</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Call now!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-1-of-3">
+              <div class="card">
+                <div class="card__side card__side--front">
+                  <div class="card__picture card__picture--3">&nbsp;</div>
+                  <h4 class="card__heading">
+                    <span class="card__heading-span card__heading-span--3"
+                      >Custom Plan</span
+                    >
+                  </h4>
+                  <div class="card__details">
+                    <ul>
+                      <li>Pages: According to Requirement</li>
+                      <li>1 Year Free Domain Name ( .com .in .org )</li>
+                      <li>Admin Access</li>
+                      <li>Free SSL Certificates</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="card__side card__side--back card__side--back-3">
+                  <div class="card__cta">
+                    <div class="card__price-box">
+                      <p class="card__price-only">Only</p>
+                      <p class="card__price-value">$897</p>
+                    </div>
+                    <a href="#popup" class="btn btn--white">Call now!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-center-text u-margin-top-huge">
+            <a href="#services" class="btn btn--green">Discover all services</a>
+          </div>
+        </section>
+        <section id="testimonials" class="section-testimonials">
+          <div class="bg-video">
+            <video class="bg-video__content" autoplay muted loop>
+              <source src="img/video.mp4" type="video/mp4" />
+              <source src="img/video.webm" type="video/webm" />
+              Your browser is not supported!
+            </video>
+          </div>
+
+          <div class="u-center-text u-margin-bottom-big">
+            <h2 class="heading-secondary">Our Client Testimonials</h2>
+          </div>
+
+          <div class="row">
+            <div class="testimonial">
+              <figure class="testimonial__shape">
+                <img
+                  src="img/team.jpg"
+                  alt="Person on a tour"
+                  class="testimonial__img"
+                />
+                <figcaption class="testimonial__caption">
+                  Rohit Sindhi
+                </figcaption>
+              </figure>
+              <div class="testimonial__text">
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Best Team ever worked with
+                </h3>
+                <p>
+                  Would like to thank team CodZilla developers for completing my
+                  website as per commitment , the cost is very reasonable & low
+                  compare to other website develops and they also do
+                  customization as per customers need...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="testimonial">
+              <figure class="testimonial__shape">
+                <img
+                  src="img/team.jpg"
+                  alt="Person on a tour"
+                  class="testimonial__img"
+                />
+                <figcaption class="testimonial__caption">
+                  Prem Mashruwala
+                </figcaption>
+              </figure>
+              <div class="testimonial__text">
+                <h3 class="heading-tertiary u-margin-bottom-small">
+                  Excellent Service
+                </h3>
+                <p>
+                  The team is very professional and they completed the project
+                  within stipulated time.They understood all my requirements
+                  before starting and delivered everything they promised.Would
+                  recommend everyone.Thanks team !!!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="u-center-text u-margin-top-huge">
+            <a href="#testimonials" class="btn-text"
+              >Read all testimonials &rarr;</a
+            >
+          </div>
+        </section>
+        <section id="contact-us" class="section-contact-us">
+          <div class="row">
+            <div class="contact-us">
+              <div class="contact-us__form">
+                <form action="#contact-us" class="form">
+                  <div class="u-margin-bottom-medium">
+                    <h2 class="heading-secondary">Contact us</h2>
+                  </div>
+
+                  <div class="form__group">
+                    <input
+                      type="text"
+                      class="form__input"
+                      placeholder="Full name"
+                      id="name"
+                      required
+                    />
+                    <label for="name" class="form__label">Full name</label>
+                  </div>
+
+                  <div class="form__group">
+                    <input
+                      type="email"
+                      class="form__input"
+                      placeholder="Email address"
+                      id="email"
+                      required
+                    />
+                    <label for="email" class="form__label">Email address</label>
+                  </div>
+
+                  <div class="form__group u-margin-bottom-medium">
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        class="form__radio-input"
+                        id="small"
+                        name="size"
+                      />
+                      <label for="small" class="form__radio-label">
+                        <span class="form__radio-button"></span>
+                        Small team
+                      </label>
+                    </div>
+
+                    <div class="form__radio-group">
+                      <input
+                        type="radio"
+                        class="form__radio-input"
+                        id="large"
+                        name="size"
+                      />
+                      <label for="large" class="form__radio-label">
+                        <span class="form__radio-button"></span>
+                        Large team
+                      </label>
+                    </div>
+                  </div>
+
+                  <div class="form__group">
+                    <button class="btn btn--green">Next step &rarr;</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__logo-box">
+          <img src="img/logo.png" alt="Full logo" class="footer__logo" />
+        </div>
         <div class="row">
           <div class="col-1-of-2">
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              You're going to fall in love with technology
-            </h3>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-              ipsum sapiente aspernatur libero repellat quis consequatur ducimus
-              quam nisi exercitationem omnis earum qui.
-            </p>
-
-            <h3 class="heading-tertiary u-margin-bottom-small">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
-            </h3>
-            <p class="paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Asperiores nulla deserunt voluptatum nam.
-            </p>
-
-            <a href="#" class="btn-text">Learn more &rarr;</a>
+            <div class="footer__navigation">
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Company</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Contact us</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Carrers</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Privacy policy</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Terms</a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="col-1-of-2">
-            <div class="composition">
-              <img
-                src="img/code-screen.jpg"
-                alt="1"
-                class="composition__photo composition__photo--p1"
-              />
-              <img
-                src="img/team.jpg"
-                alt="2"
-                class="composition__photo composition__photo--p2"
-              />
-              <img
-                src="img/workstation.jpg"
-                alt="3"
-                class="composition__photo composition__photo--p3"
-              />
-            </div>
+            <p class="footer__copyright">
+              © 1996-2024, Codzilla Technologies Pvt Ltd
+            </p>
           </div>
         </div>
-      </section>
-
-      <section class="section-features">
-        <div class="row">
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-world"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Explore the world
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
-              </p>
-            </div>
+      </footer>
+      <!-- <div id="particles-js"></div> -->
+      <div class="popup" id="popup">
+        <div class="popup__content">
+          <div class="popup__left">
+            <img src="img/team.jpg" alt="Tour" class="popup__img" />
+            <img src="img/code-screen.jpg" alt="Tour" class="popup__img" />
           </div>
-
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-compass"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Meet nature
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
-              </p>
-            </div>
+          <div class="popup__right">
+            <a href="#section-tours" class="popup__close">&times;</a>
+            <!-- <h2 class="heading-secondary u-margin-bottom-small">Call now</h2> -->
+            <h3 class="heading-tertiary u-margin-bottom-small">
+              Important &ndash; Please read these terms before ordering
+            </h3>
+            <p class="popup__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed
+              sed risus pretium quam. Aliquam sem et tortor consequat id.
+              Volutpat odio facilisis mauris sit amet massa vitae. Mi bibendum
+              neque egestas congue. Placerat orci nulla pellentesque dignissim
+              enim sit. Vitae semper quis lectus nulla at volutpat diam ut
+              venenatis. Malesuada pellentesque elit eget gravida cum sociis
+              natoque penatibus et. Proin fermentum leo vel orci porta non
+              pulvinar neque laoreet. Gravida neque convallis a cras semper.
+              Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
+              vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam
+              libero justo laoreet sit. Amet massa vitae tortor condimentum
+              lacinia quis vel eros donec. Sit amet facilisis magna etiam.
+              Imperdiet sed euismod nisi porta.
+            </p>
+            <a href="#" class="btn btn--green">Call now</a>
           </div>
-
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-map"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Find your way
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
-              </p>
-            </div>
-          </div>
-
-          <div class="col-1-of-4">
-            <div class="feature-box">
-              <i class="feature-box__icon icon-basic-heart"></i>
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Live a healthier life
-              </h3>
-              <p class="feature-box__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section-services" id="section-services">
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">Most popular services</h2>
-        </div>
-
-        <div class="row">
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--1">&nbsp;</div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--1"
-                    >Proposal 1</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>3 week project</li>
-                    <li>Up to 5 people</li>
-                    <li>1 Team Lead</li>
-                    <li>1 Scrum Master</li>
-                    <li>1 Project Manager</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-1">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$297</p>
-                  </div>
-                  <a href="#popup" class="btn btn--white">Buy now!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--2">&nbsp;</div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--2"
-                    >Proposal 2</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>3 week project</li>
-                    <li>Up to 5 people</li>
-                    <li>1 Team Lead</li>
-                    <li>1 Scrum Master</li>
-                    <li>1 Project Manager</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-2">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$497</p>
-                  </div>
-                  <a href="#popup" class="btn btn--white">Buy now!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-1-of-3">
-            <div class="card">
-              <div class="card__side card__side--front">
-                <div class="card__picture card__picture--3">&nbsp;</div>
-                <h4 class="card__heading">
-                  <span class="card__heading-span card__heading-span--3"
-                    >Proposal 3</span
-                  >
-                </h4>
-                <div class="card__details">
-                  <ul>
-                    <li>3 week project</li>
-                    <li>Up to 5 people</li>
-                    <li>1 Team Lead</li>
-                    <li>1 Scrum Master</li>
-                    <li>1 Project Manager</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="card__side card__side--back card__side--back-3">
-                <div class="card__cta">
-                  <div class="card__price-box">
-                    <p class="card__price-only">Only</p>
-                    <p class="card__price-value">$897</p>
-                  </div>
-                  <a href="#popup" class="btn btn--white">Buy now!</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="u-center-text u-margin-top-huge">
-          <a href="#" class="btn btn--green">Discover all services</a>
-        </div>
-      </section>
-      <section class="section-testimonials">
-        <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
-            <source src="img/video.mp4" type="video/mp4" />
-            <source src="img/video.webm" type="video/webm" />
-            Your browser is not supported!
-          </video>
-        </div>
-
-        <div class="u-center-text u-margin-bottom-big">
-          <h2 class="heading-secondary">We make people genuinely happy</h2>
-        </div>
-
-        <div class="row">
-          <div class="testimonial">
-            <figure class="testimonial__shape">
-              <img
-                src="img/team.jpg"
-                alt="Person on a tour"
-                class="testimonial__img"
-              />
-              <figcaption class="testimonial__caption">Client 1</figcaption>
-            </figure>
-            <div class="testimonial__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                Best Team ever worked with
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="testimonial">
-            <figure class="testimonial__shape">
-              <img
-                src="img/team.jpg"
-                alt="Person on a tour"
-                class="testimonial__img"
-              />
-              <figcaption class="testimonial__caption">Client 2</figcaption>
-            </figure>
-            <div class="testimonial__text">
-              <h3 class="heading-tertiary u-margin-bottom-small">
-                WOW! My life is completely different now
-              </h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-                Aperiam, ipsum sapiente aspernatur libero repellat quis
-                consequatur ducimus quam nisi exercitationem omnis earum qui.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="u-center-text u-margin-top-huge">
-          <a href="#" class="btn-text">Read all testimonials &rarr;</a>
-        </div>
-      </section>
-      <section class="section-contact-us">
-        <div class="row">
-          <div class="contact-us">
-            <div class="contact-us__form">
-              <form action="#" class="form">
-                <div class="u-margin-bottom-medium">
-                  <h2 class="heading-secondary">Contact us</h2>
-                </div>
-
-                <div class="form__group">
-                  <input
-                    type="text"
-                    class="form__input"
-                    placeholder="Full name"
-                    id="name"
-                    required
-                  />
-                  <label for="name" class="form__label">Full name</label>
-                </div>
-
-                <div class="form__group">
-                  <input
-                    type="email"
-                    class="form__input"
-                    placeholder="Email address"
-                    id="email"
-                    required
-                  />
-                  <label for="email" class="form__label">Email address</label>
-                </div>
-
-                <div class="form__group u-margin-bottom-medium">
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="small"
-                      name="size"
-                    />
-                    <label for="small" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Small team
-                    </label>
-                  </div>
-
-                  <div class="form__radio-group">
-                    <input
-                      type="radio"
-                      class="form__radio-input"
-                      id="large"
-                      name="size"
-                    />
-                    <label for="large" class="form__radio-label">
-                      <span class="form__radio-button"></span>
-                      Large team
-                    </label>
-                  </div>
-                </div>
-
-                <div class="form__group">
-                  <button class="btn btn--green">Next step &rarr;</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer">
-      <div class="footer__logo-box">
-        <img src="img/logo.png" alt="Full logo" class="footer__logo" />
-      </div>
-      <div class="row">
-        <div class="col-1-of-2">
-          <div class="footer__navigation">
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a href="#" class="footer__link">Company</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Contact us</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Carrers</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Privacy policy</a>
-              </li>
-              <li class="footer__item">
-                <a href="#" class="footer__link">Terms</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-1-of-2">
-          <p class="footer__copyright">
-            Built by <a href="#" class="footer__link">Jatin Narang</a> for his
-            personal portfolio.
-          </p>
-        </div>
-      </div>
-    </footer>
-
-    <div class="popup" id="popup">
-      <div class="popup__content">
-        <div class="popup__left">
-          <img src="img/team.jpg" alt="Tour" class="popup__img" />
-          <img src="img/code-screen.jpg" alt="Tour" class="popup__img" />
-        </div>
-        <div class="popup__right">
-          <a href="#section-tours" class="popup__close">&times;</a>
-          <!-- <h2 class="heading-secondary u-margin-bottom-small">Buy now</h2> -->
-          <h3 class="heading-tertiary u-margin-bottom-small">
-            Important &ndash; Please read these terms before ordering
-          </h3>
-          <p class="popup__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed sed
-            risus pretium quam. Aliquam sem et tortor consequat id. Volutpat
-            odio facilisis mauris sit amet massa vitae. Mi bibendum neque
-            egestas congue. Placerat orci nulla pellentesque dignissim enim sit.
-            Vitae semper quis lectus nulla at volutpat diam ut venenatis.
-            Malesuada pellentesque elit eget gravida cum sociis natoque
-            penatibus et. Proin fermentum leo vel orci porta non pulvinar neque
-            laoreet. Gravida neque convallis a cras semper. Molestie at
-            elementum eu facilisis sed odio morbi quis. Faucibus vitae aliquet
-            nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet
-            sit. Amet massa vitae tortor condimentum lacinia quis vel eros
-            donec. Sit amet facilisis magna etiam. Imperdiet sed euismod nisi
-            porta.
-          </p>
-          <a href="#" class="btn btn--green">Buy now</a>
         </div>
       </div>
     </div>
   </body>
+  <script src="scripts.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 100,
+          density: {
+            enable: true,
+            value_area: 800,
+          },
+        },
+        color: {
+          value: "#ffffff",
+        },
+        shape: {
+          type: "circle",
+          stroke: {
+            width: 0,
+            color: "#000000",
+          },
+          polygon: {
+            nb_sides: 5,
+          },
+        },
+        opacity: {
+          value: 0.5,
+          random: false,
+          anim: {
+            enable: false,
+            speed: 1,
+            opacity_min: 0.1,
+            sync: false,
+          },
+        },
+        size: {
+          value: 3,
+          random: true,
+          anim: {
+            enable: false,
+            speed: 40,
+            size_min: 0.1,
+            sync: false,
+          },
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: true,
+          speed: 6,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+          bounce: false,
+          attract: {
+            enable: false,
+            rotateX: 600,
+            rotateY: 1200,
+          },
+        },
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: true,
+            mode: "repulse",
+          },
+          onclick: {
+            enable: true,
+            mode: "push",
+          },
+          resize: true,
+        },
+        modes: {
+          grab: {
+            distance: 400,
+            line_linked: {
+              opacity: 1,
+            },
+          },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 0.8,
+            speed: 3,
+          },
+          repulse: {
+            distance: 200,
+            duration: 0.4,
+          },
+          push: {
+            particles_nb: 4,
+          },
+          remove: {
+            particles_nb: 2,
+          },
+        },
+      },
+      retina_detect: true,
+    });
+  </script>
 </html>

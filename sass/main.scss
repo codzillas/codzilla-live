@@ -23,3 +23,13 @@
 @import "layout/footer";
 @import "layout/navigation";
 @import "layout/grid";
+
+#particles-js {
+    width: 94%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    // background-color: #263cff;
+    background-color: $color-primary-dark;
+}
+
