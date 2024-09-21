@@ -18,18 +18,20 @@
 @import "components/form";
 @import "components/popup";
 
-
 @import "layout/header";
 @import "layout/footer";
 @import "layout/navigation";
 @import "layout/grid";
 
 #particles-js {
-    width: 94%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    // background-color: #263cff;
-    background-color: $color-primary-dark;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  // background-color: #263cff;
+  background-color: $color-primary-dark;
 }
 
+.color-white {
+  color: white;
+}
